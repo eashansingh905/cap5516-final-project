@@ -3,10 +3,10 @@ Automatic Hyper-parameter Tuning with Genetic Algorithms
 
 ## Instructions: How to run the code
 
-[GA-utilities](https://github.com/eashansingh905/cap5516-final-project/tree/main/GA-utilities) has the sample optimizaiton problems used to build the
+[GA-utilities](https://github.com/eashansingh905/cap5516-final-project/tree/main/GA-utilities) has the sample optimization problems used to build the
 infrastructure for the GA.
 
-[classifier](https://github.com/eashansingh905/cap5516-final-project/tree/main/classifier) has the link to brain tumor identification codes
+[classifier](https://github.com/eashansingh905/cap5516-final-project/tree/main/classifier) has the link to brain tumor identification related code
 
 Link to dataset: https://github.com/sartajbhuvaji/brain-tumor-classification-dataset
 
@@ -33,8 +33,6 @@ This research aims to develop a deep learning model for multi-class brain tumor 
 
 6) Make conclusions on the ability of the genetic algorithm to improve model generalizability and performance. Discuss the added computational overhead and whether it warrants its use. 
 
-
-
 ## Experiments: 
 
 ### Genetic Algorithm Optimization
@@ -47,6 +45,11 @@ Crossover type ( single-point, two-point, blend, simplex, linear, simulated bina
 Crossover rates  (0.01, 0.05, 0.1, 0.5, 0.9)
 Selection strategy (tournament, rank, proportional) 
 
+Encodings of sample solutions will be of the form:
+
+E(Learning rate, batch size, # of filter)
+
+Future study opportunities: 
 In addition to the parameters that define the GA, extensive studies on various types of GA’s can also be performed to see which genetic algorithm (GA) is able to best tune our CNN. Sample genetic algorithms (GA) to be compared: 
 
 Canonical Genetic Algorithm (CGA)
@@ -58,17 +61,71 @@ Teaching Learning based Optimization (TLBO)
 
 The data augmentation used for the purposes of this project can also be evaluated in terms of model performance to see which techniques fare well. Testing can be done into various types of augmentation approaches like flipping, rotation, zoom, and grayscaling. The extent to which augmentation was utilized can also be studied like the degrees of rotation or amount of scaling.
 
-### Transfer Learning. 
-
-Determining the effectiveness of transfer learning can be done by comparing model performance to other pre-trained models like VGG and Inception-v3. Layers of the CNN can also be frozen so optimal weights can be found for individual layers and a better network architecture can be found.
-
 ### Evaluation Metrics
 
 To measure model performance, we can use some evaluation metrics to determine model performance. Sample evaluation metrics:
-Accuracy
-Recall
-F1 score 
-ROC curve
+
+1) Training/Validation Loss
+2) Accuracy
+3) Precision
+4) Recall
+5) F1 score 
+
+These metrics will be compared for the baseline and optimized models to see potential improvements in terms of performance
+and generalizability.
+
+### Model Architecture 
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 148, 148, 32)      896       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 146, 146, 64)      18496     
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 73, 73, 64)        0         
+_________________________________________________________________
+dropout (Dropout)            (None, 73, 73, 64)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 71, 71, 64)        36928     
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 69, 69, 64)        36928     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 69, 69, 64)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 34, 34, 64)        0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 34, 34, 64)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 32, 32, 128)       73856     
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 30, 30, 128)       147584    
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 28, 28, 128)       147584    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 14, 14, 128)       0         
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 14, 14, 128)       0         
+_________________________________________________________________
+conv2d_7 (Conv2D)            (None, 12, 12, 256)       295168    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 6, 6, 256)          0         
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 6, 6, 256)          0         
+_________________________________________________________________
+flatten (Flatten)            (None, 9216)              0         
+_________________________________________________________________
+dense (Dense)                (None, 256)               2359552   
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 256)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 4)                 1028      
+=================================================================
+Total params: 2,942,020
+Trainable params: 2,942,020
+Non-trainable params: 0
+_________________________________________________________________
+
 
 ## Related Works:
 
