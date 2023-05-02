@@ -22,7 +22,7 @@ Utilizing genetic algorithms(GAs) like Particle Swarm Optimization (PSO), Differ
  Examples of hyper-parameters which the genetic algorithm (GA) can optimize:
 Learning Rate
 Batch Size
-Number of layers
+Number of filters
 
 3) Applying data augmentation techniques to images for increased diversity. Some example approaches to this can be: rotation of images by 30 degrees, zoom, grayscaling, and flipping.
 
@@ -74,18 +74,4 @@ ROC curve
 
 2) Bahadure et al.(2018) studied a comparative approach similar to the one I wish to perform on different segmentation techniques using genetic algorithms (GA). This paper used feature extraction using GAs and this is a stretch goal for my experiment. 
 
-3) Deepak et al.(2019) had much success using transfer learning in the classification of brain tumors. They were able to get 98% accuracy with their predictions for a 3-class classification problem. This is one motivation for integrating transfer learning in this project. 
-
-## Model Architecture
-
-
-
-## Results
-
-
-## Analysis of Results
-
-
-## Conclusion
-
-
+3) Deepak et al.(2019) had much success using transfer learning in the classification of brain tumors. They were able to get 98% accuracy with their predictions for a 3-class classification problem. This is one motivation for integrating transfer learning in this project.
