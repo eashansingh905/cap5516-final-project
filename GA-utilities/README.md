@@ -6,5 +6,5 @@ This folder holds associated code used in testing the GA infrastructure on simpl
 and for implementation practice.
 
 Problems tested:
-	1) 0-1 Knapsack
-	2) Onemax 
+	* 0-1 Knapsack
+	* Onemax 
