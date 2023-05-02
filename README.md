@@ -3,9 +3,15 @@ Automatic Hyper-parameter Tuning with Genetic Algorithms
 
 ## Instructions: How to run the code
 
+[GA-utilities](https://github.com/eashansingh905/cap5516-final-project/tree/main/GA-utilities) has the sample optimizaiton problems used to build the
+infrastructure for the GA.
+
+[classifier](https://github.com/eashansingh905/cap5516-final-project/tree/main/classifier) has the link to brain tumor identification codes
+
+Link to dataset: https://github.com/sartajbhuvaji/brain-tumor-classification-dataset
 
 ## Task
-This research aims to develop a deep learning model for brain tumor classification that combines transfer learning and genetic algorithms(GAs) for optimized hyper-parameter tuning and model architecture. Data augmentation techniques will also be used for improving the generalizability of our model and increasing the size of our dataset. Motivations for this project are three-fold:
+This research aims to develop a deep learning model for multi-class brain tumor detection with the use of genetic algorithms (GAs) for optimized hyper-parameter tuning and model architecture. Genetic Algorithms have been found to be effective at several optimization problems, taking inspiration from evolutionary processes and a “survival of the fittest” approach. Data augmentation techniques will also be used for improving the generalizability of our model and increasing the size of our dataset. Motivations for this project are three-fold:
 
 1) Deep learning models can become highly complex and fine-tuning hyper-parameters can become a very time intensive task. Research has shown genetic algorithms(GA) offer an efficient way to find optimality of parameters and for exploration of the hyper-parameter search space.
 
@@ -17,20 +23,16 @@ This research aims to develop a deep learning model for brain tumor classificati
 
 1) Pre-processing a brain tumor MRI dataset by employing normalization, de-noising, and re-sampling techniques and then segmenting regions with existence of tumors. 
 
-2) Employing transfer learning on a pre-trained CNN network like ResNet for classification of brain tumors.
-Utilizing genetic algorithms(GAs) like Particle Swarm Optimization (PSO), Differential Evolution (DE), or Teaching Learning based Optimization (TLBO) for optimization of hyper-parameters.
- Examples of hyper-parameters which the genetic algorithm (GA) can optimize:
-Learning Rate
-Batch Size
-Number of filters
+2) Employ a CNN architecture to develop a baseline model for various forms of brain tumor detection. Train the model by hand and record model performance observing key metrics like Train/Val Loss, Accuracy, F1 score, Precision, and Recall. 
 
-3) Applying data augmentation techniques to images for increased diversity. Some example approaches to this can be: rotation of images by 30 degrees, zoom, grayscaling, and flipping.
+3) Implement a genetic algorithm to evolve a population of CNN hyper-parameters
 
-4) Using the newly optimized transfer learning model to perform brain tumor classification again and evaluate performance. 
+4) Observe the model performance with the optimized hyper-parameters and analyze the differences in the recorded metrics.
 
-5) Using genetic algorithms(GAs) again to perform feature extraction to generate an “optimal architecture” for the CNN. 
+5) Apply data augmentations to see if we can improve the results
 
-6) Comparing the performance of the model with other base-line classification algorithms like SVM and DNNs. [28, 29]
+6) Make conclusions on the ability of the genetic algorithm to improve model generalizability and performance. Discuss the added computational overhead and whether it warrants its use. 
+
 
 
 ## Experiments: 
