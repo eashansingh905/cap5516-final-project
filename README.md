@@ -1,4 +1,5 @@
 # CAP5516 Final Project
+Automatic Hyper-parameter Tuning with Genetic Algorithms and Transfer Learning
 
 ## Instructions: How to run the code
 
