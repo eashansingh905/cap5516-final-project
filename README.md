@@ -6,7 +6,7 @@ Automatic Hyper-parameter Tuning with Genetic Algorithms
 [GA-utilities](https://github.com/eashansingh905/cap5516-final-project/tree/main/GA-utilities) has the sample optimization problems used to build the
 infrastructure for the GA.
 
-[classifier](https://github.com/eashansingh905/cap5516-final-project/tree/main/classifier) has the link to brain tumor identification related code
+[classifier](https://github.com/eashansingh905/cap5516-final-project/tree/main/classifier) has the link to brain tumor identification related code. The baseline classifier is in 'baseline_brain_tumor_detection.ipynb' and the GA optimized classifier is in 'ga_optimized_brain_tumor_detection'.
 
 Link to dataset: https://github.com/sartajbhuvaji/brain-tumor-classification-dataset
 
