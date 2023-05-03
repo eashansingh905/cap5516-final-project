@@ -10,6 +10,8 @@ infrastructure for the GA.
 
 Link to dataset: https://github.com/sartajbhuvaji/brain-tumor-classification-dataset
 
+[final report](https://github.com/eashansingh905/cap5516-final-project/blob/main/final-report.pdf) is attached with findings and conclusions.
+
 ## Task
 This research aims to develop a deep learning model for multi-class brain tumor detection with the use of genetic algorithms (GAs) for optimized hyper-parameter tuning and model architecture. Genetic Algorithms have been found to be effective at several optimization problems, taking inspiration from evolutionary processes and a “survival of the fittest” approach. Data augmentation techniques will also be used for improving the generalizability of our model and increasing the size of our dataset. Motivations for this project are three-fold:
 
